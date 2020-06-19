@@ -53,6 +53,7 @@ namespace pilas_colas_listas
                 cmbUbicacion.Text = myCanal.Ubicacion;
                 dataGridView1.DataSource = MyPilaCanalTelevision.ToArray();
                 MessageBox.Show("Se elimino el registro");
+                LimpiarFormulario();
             }
             else
             {
@@ -63,7 +64,9 @@ namespace pilas_colas_listas
         private void LimpiarFormulario()
         {
             txtIdentificacionUsuario.Clear();
-            cmbEstrato.Items.Clear();
+            cmbEstrato.Text = null;
+            cmbNombreCanal.Text = null;
+            cmbUbicacion.Text = null;
         }
 
     }
